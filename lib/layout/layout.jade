@@ -1,9 +1,9 @@
 mixin post(post)
-  hr
   article.post
     h1.title= post.title
     small.date= post.created_at
     .content !{post.content}
+  hr
 
 doctype 5
 html
