@@ -1,0 +1,10 @@
+{
+  "name": "mat.io",
+  "version": "0.0.1",
+  "paths": ["lib"],
+  "local": [
+    "layout",
+    "home",
+    "post"
+  ]
+}

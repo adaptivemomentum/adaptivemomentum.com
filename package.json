@@ -12,6 +12,12 @@
   "dependencies": {
     "marked": "~0.2.7",
     "jade": "~0.28.1",
-    "express": "~3.0.6"
+    "express": "~3.0.6",
+    "rework-mixins": "~1.0.2",
+    "css-whitespace": "0.0.5",
+    "component-builder": "~0.6.2",
+    "rework": "~0.12.0",
+    "string-to-js": "0.0.1",
+    "debug": "~0.7.0"
   }
 }

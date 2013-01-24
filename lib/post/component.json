@@ -1,0 +1,6 @@
+{
+  "name": "page",
+  "version" : "0.0.1",
+  "description": "page",
+  "styles": ["page.styl"]
+}
