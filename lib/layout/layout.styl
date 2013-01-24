@@ -1,3 +1,7 @@
+/**
+ * Base styles
+ */
+
 *
   box-sizing: border-box
   margin: 0
@@ -6,5 +10,112 @@ html, body
   height: 100%
   width: 100%
   color: #333
-  background-color: #fff
+  // background-color: #fff;
+
+body
+  font-size: 18px
+
+h1, h2, h3, h4, h5, h6, h7
+  font-family: 'Lato', 'Helvetica Neue', Helvetica
+  font-weight: 700
+
+p
+  font-family: 'EB Garamond', 'Helvetica Neue', Helvetica
+  line-height: 1.33em
+  font-size: 20px
+  font-weight: 400
+  padding-bottom: 20px
+
+hr
+  height: 1px
+  background: #eee
+  border: none
+  margin: 50px auto
+
+i
+  font-style: inherit
+  display: inline-block
+  padding: 0 3px
+
+/**
+ * mat.io layout styles
+ */
+
+body
+  border-top: 6px solid #63849D
+
+.wrapper
+  max-width: 650px
+  width: 40% // Temporary
+  padding: 0 40px
+  margin: 50px auto
+
+#jellyfish
+  background: url('images/jellyfish.png') no-repeat
+  background-size: contain
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 246px
+  height: 263px
+  z-index: -1
+
+#top, #posts
+  width: 100%
+  margin: 0 auto;
+
+#top
+  position: relative;
+  margin: 30px 0
+
+  #header
+    font-size: 24px
+
+  #tray
+    position: absolute;
+    right: 0
+    top: -3px
+    font-size: 36px
+
+    a, i
+      margin: 0 10px
+      color: #ccc
+      text-decoration: none;
+      transition: color .25s ease-in-out;
+
+      &:last-child
+        margin-right: 0
+
+      &:hover
+        color: #63849D
+
+#posts
+
+  .post
+    position: relative
+
+    &:last-child
+      padding-bottom: 50px
+
+  hr
+    width: 90%
+    margin: 40px auto
+
+  .title
+    margin: 0
+    font-size: 22px
+    color: #63849D
+    padding-bottom: 20px
+
+  .date
+    font-style: italic
+    font-size: 13px
+    position: absolute
+    right: 3px
+    top: 9px
+    color: #999
+
+  .content
+    text-align:justify;
+    text-justify:inter-word;
 

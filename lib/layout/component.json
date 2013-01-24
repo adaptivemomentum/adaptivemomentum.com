@@ -2,5 +2,12 @@
   "name": "layout",
   "version" : "0.0.1",
   "description": "layout",
-  "styles": ["layout.styl"]
+  "styles": ["layout.styl"],
+  "images": [
+    "images/jellyfish.png",
+    "images/jellyfish@2x.png"
+  ],
+  "dependencies" : {
+    "matthewmueller/ligature-symbols" : "*"
+  }
 }

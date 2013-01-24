@@ -18,6 +18,7 @@
     "component-builder": "~0.6.2",
     "rework": "~0.12.0",
     "string-to-js": "0.0.1",
-    "debug": "~0.7.0"
+    "debug": "~0.7.0",
+    "wordsmith": "0.0.1"
   }
 }

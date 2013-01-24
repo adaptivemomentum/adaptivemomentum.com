@@ -1,11 +1,35 @@
+mixin post(post)
+  hr
+  article.post
+    h1.title= post.title
+    small.date= post.created_at
+    .content !{post.content}
+
 doctype 5
 html
   head
     title Matthew Mueller
     block styles
       link(rel='stylesheet', href='/build.css')
+      link(href='http://fonts.googleapis.com/css?family=Lato:700', rel='stylesheet')
+      link(href='http://fonts.googleapis.com/css?family=EB+Garamond', rel='stylesheet')
 
   body
-    block content
+    #jellyfish
+    .wrapper
+      #top
+        h2#header Matthew Mueller
+        #tray
+          a.lsf(href='#') mail
+          a.lsf(href='#') github
+          a.lsf(href='#') twitter
+          a.lsf(href='#') feed
+    hr
+
+    .wrapper
+      #posts
+        - each p in posts
+          mixin post(p)
+
     block scripts
       script(src="/build.js")

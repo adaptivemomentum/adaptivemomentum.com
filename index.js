@@ -28,6 +28,7 @@ app.configure('development', function(){
  * Mount
  */
 
+app.use(require('./lib/wordsmith'));
 app.use(require('post'));
 app.use(require('home'));
 

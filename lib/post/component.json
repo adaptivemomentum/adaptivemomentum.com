@@ -1,6 +1,6 @@
 {
-  "name": "page",
+  "name": "post",
   "version" : "0.0.1",
-  "description": "page",
-  "styles": ["page.styl"]
+  "description": "post",
+  "styles": ["post.styl"]
 }
