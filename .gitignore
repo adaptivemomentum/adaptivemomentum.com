@@ -1,0 +1,5 @@
+build
+!lib/build
+node_modules
+pids
+logs

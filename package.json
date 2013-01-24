@@ -1,0 +1,17 @@
+{
+  "name": "mat.io",
+  "version": "0.0.1",
+  "description": "matt's personal blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "matt mueller",
+  "license": "MIT",
+  "dependencies": {
+    "marked": "~0.2.7",
+    "jade": "~0.28.1",
+    "express": "~3.0.6"
+  }
+}
