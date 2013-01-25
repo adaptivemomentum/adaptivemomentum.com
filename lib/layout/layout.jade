@@ -1,10 +1,3 @@
-mixin post(post)
-  article.post
-    h1.title= post.title
-    small.date= post.created_at
-    .content !{post.content}
-  hr
-
 doctype 5
 html
   head
@@ -15,21 +8,25 @@ html
       link(href='http://fonts.googleapis.com/css?family=EB+Garamond', rel='stylesheet')
 
   body
-    #jellyfish
-    .wrapper
-      #top
-        h2#header Matthew Mueller
-        #tray
-          a.lsf(href='#') mail
-          a.lsf(href='#') github
-          a.lsf(href='#') twitter
-          a.lsf(href='#') feed
-    hr
+    #wrapper
+      block content
 
-    .wrapper
-      #posts
-        - each p in posts
-          mixin post(p)
 
-    block scripts
-      script(src="/build.js")
+    //- #jellyfish
+    //- .wrapper
+    //-   #top
+    //-     h2#header Matthew Mueller
+    //-     #tray
+    //-       a.lsf(href='#') mail
+    //-       a.lsf(href='#') github
+    //-       a.lsf(href='#') twitter
+    //-       a.lsf(href='#') feed
+    //- hr
+
+    //- .wrapper
+    //-   #posts
+    //-     - each p in posts
+    //-       mixin post(p)
+
+    //- block scripts
+    //-   script(src="/build.js")

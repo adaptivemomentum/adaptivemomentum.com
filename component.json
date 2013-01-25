@@ -4,6 +4,7 @@
   "paths": ["lib"],
   "local": [
     "layout",
+    "head",
     "home",
     "post"
   ]

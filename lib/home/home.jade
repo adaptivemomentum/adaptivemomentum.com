@@ -1,7 +1,13 @@
 extends ../layout/layout
+include ../post/post
 
 append scripts
   //- script require('home')
 
 block content
-  p hi!
+  include ../head/head
+
+  - each p in posts
+    mixin post(p)
+
+

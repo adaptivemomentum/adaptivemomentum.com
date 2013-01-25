@@ -1,0 +1,5 @@
+mixin post(post)
+  article.post
+    h1.title= post.title
+    .date !{post.created_at}
+    .content !{post.content}
