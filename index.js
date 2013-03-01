@@ -4,7 +4,9 @@
 
 var port = process.argv[2] || 3001,
     express = require('express'),
-    app = module.exports = express();
+    app = module.exports = express(),
+    SimpleNote = require('simplenote'),
+    auth = require(process.env.HOME + '/credentials.json').simplenote;
 
 /**
  * Configuration
@@ -28,12 +30,24 @@ app.configure('development', function(){
  * Mount
  */
 
-app.use(require('./lib/wordsmith'));
 app.use(require('home'));
 
 app.configure('development', function() {
   app.use(express.errorHandler());
 });
+
+/**
+ * Periodically query simple note for changes
+ */
+
+var Note = SimpleNote(auth.email, auth.password);
+
+setInterval(function() {
+  Note.all(function(err, notes) {
+    if(err) console.log(err);
+    console.log(notes[1]);
+  })
+}, 5000);
 
 /**
  * Listen

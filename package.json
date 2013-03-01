@@ -21,6 +21,7 @@
     "debug": "~0.7.0",
     "wordsmith": "0.0.1",
     "moment": "~1.7.2",
-    "modella": "0.0.5"
+    "modella": "0.0.5",
+    "simplenote": "0.0.1"
   }
 }
