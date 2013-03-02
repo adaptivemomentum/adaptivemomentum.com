@@ -5,7 +5,7 @@
 var port = process.argv[2] || 3001,
     express = require('express'),
     app = module.exports = express(),
-    SimpleNote = require('simplenote'),
+    Sync = require('sync'),
     auth = require(process.env.HOME + '/credentials.json').simplenote;
 
 /**
@@ -40,14 +40,12 @@ app.configure('development', function() {
  * Periodically query simple note for changes
  */
 
-var Note = SimpleNote(auth.email, auth.password);
+var sync = Sync('mat.io');
+setInterval(sync.sync.bind(sync), 15000);
 
-setInterval(function() {
-  Note.all(function(err, notes) {
-    if(err) console.log(err);
-    console.log(notes[1]);
-  })
-}, 5000);
+sync.sync(function(err) {
+  if(err) throw err;
+});
 
 /**
  * Listen
