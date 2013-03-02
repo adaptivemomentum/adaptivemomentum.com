@@ -61,13 +61,11 @@ var server = app.listen(port, function() {
  */
 
 function shutdown() {
-  console.log('closing...');
   server.close();
   redis.client.quit();
 
   // arbitrary 2 seconds
   setTimeout(function() {
-    console.log('closed');
     process.exit(0);
   }, 2000);
 }
