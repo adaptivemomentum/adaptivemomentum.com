@@ -41,11 +41,12 @@ app.configure('development', function() {
  */
 
 var sync = Sync('mat.io');
-setInterval(sync.sync.bind(sync), 15000);
 
-sync.sync(function(err) {
-  if(err) throw err;
-});
+setInterval(function() {
+  sync.sync(function(err) {
+    if(err) console.log(err);
+  });
+}, random(15, 30) * 1000);
 
 /**
  * Listen
@@ -73,3 +74,11 @@ function shutdown() {
 
 process.on('SIGTERM', shutdown);
 process.on('SIGQUIT', shutdown);
+
+/**
+ * Random number between `min` and `max`
+ */
+
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
