@@ -43,19 +43,16 @@ app.configure('development', function() {
 
 var sync = Sync('mat.io');
 
-// Kinda lame, but whatever
-if(port === 9100) {
-  setInterval(function() {
-    sync.sync(function(err) {
-      if(err) console.error(err);
-    });
-  }, random(30, 60) * 1000);
-
+setInterval(function() {
   sync.sync(function(err) {
     if(err) console.error(err);
-    else console.log('all synced!');
   });
-}
+}, random(30, 60) * 1000);
+
+sync.sync(function(err) {
+  if(err) console.error(err);
+  else console.log('all synced!');
+});
 
 /**
  * Listen
