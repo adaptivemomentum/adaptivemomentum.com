@@ -2,7 +2,7 @@
  * Module dependencies.
  */
 
-var port = process.argv[2] || 3001,
+var port = process.argv[2] || 9100,
     express = require('express'),
     app = module.exports = express(),
     Sync = require('sync'),
@@ -43,16 +43,19 @@ app.configure('development', function() {
 
 var sync = Sync('mat.io');
 
-setInterval(function() {
+// Kinda lame, but whatever
+if(port === 9100) {
+  setInterval(function() {
+    sync.sync(function(err) {
+      if(err) console.error(err);
+    });
+  }, random(30, 60) * 1000);
+
   sync.sync(function(err) {
     if(err) console.error(err);
+    else console.log('all synced!');
   });
-}, random(30, 60) * 1000);
-
-sync.sync(function(err) {
-  if(err) console.error(err);
-  else console.log('all synced!');
-});
+}
 
 /**
  * Listen
