@@ -3,7 +3,7 @@ JSON = $(wildcard lib/*/component.json)
 
 build: components $(SRC)
 	@npm install
-	@./lib/build/build
+	@./lib/build/builder
 
 components: component.json $(JSON)
 	@component install
