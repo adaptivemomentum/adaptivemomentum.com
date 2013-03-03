@@ -19,7 +19,7 @@ app.configure('production', function() {
   app.use(express.compress());
 });
 
-// app.use(express.static(__dirname + '/build'));
+app.use(express.static(__dirname + '/build'));
 
 app.configure('development', function(){
   app.use(require('build'));
