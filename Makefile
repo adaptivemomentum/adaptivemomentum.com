@@ -21,6 +21,6 @@ minify-js: build/build.js
 	mv $<.tmp $<
 
 clean:
-	rm -fr build components node_modules
+	rm -fr components node_modules
 
 .PHONY: build clean minify
