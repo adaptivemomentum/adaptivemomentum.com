@@ -71,7 +71,6 @@ var server = app.listen(port, function() {
 
 function shutdown() {
   server.close();
-  redis.client.quit();
 
   // arbitrary 2 seconds
   setTimeout(function() {
