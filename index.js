@@ -49,6 +49,11 @@ setInterval(function() {
   });
 }, random(30, 60) * 1000);
 
+sync.sync(function(err) {
+  if(err) console.error(err);
+  else console.log('all synced!');
+});
+
 /**
  * Listen
  */
