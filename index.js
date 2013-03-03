@@ -19,7 +19,7 @@ app.configure('production', function() {
   app.use(express.compress());
 });
 
-app.use(express.static(__dirname + '/build'));
+// app.use(express.static(__dirname + '/build'));
 
 app.configure('development', function(){
   app.use(require('build'));
@@ -31,6 +31,7 @@ app.configure('development', function(){
  */
 
 app.use(require('home'));
+app.use(require('deploy'));
 
 app.configure('development', function() {
   app.use(express.errorHandler());
@@ -44,9 +45,9 @@ var sync = Sync('mat.io');
 
 setInterval(function() {
   sync.sync(function(err) {
-    if(err) console.log(err);
+    if(err) console.error(err);
   });
-}, random(15, 30) * 1000);
+}, random(30, 60) * 1000);
 
 /**
  * Listen
