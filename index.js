@@ -75,6 +75,7 @@ function shutdown() {
   }, 2000);
 }
 
+process.on('SIGINT', shutdown);
 process.on('SIGTERM', shutdown);
 process.on('SIGQUIT', shutdown);
 
