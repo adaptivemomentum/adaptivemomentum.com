@@ -5,12 +5,10 @@
   "main" : "layout.js",
   "scripts" : ["layout.js"],
   "styles": [
-    "styles/reset.styl",
-    "styles/type.styl",
-    "styles/layout.styl"
+    "layout.styl"
   ],
   "images": [
-    "images/jellyfish.png",
-    "images/jellyfish@2x.png"
+    "images/logo.png",
+    "images/logo@2x.png"
   ]
 }

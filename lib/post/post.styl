@@ -3,8 +3,13 @@
   padding: 0 0 20px 80px
 
   .content a
-    background: #e0f7ff
+    background: #FFFBCC
     padding: 2px 6px;
+
+    // overwrite other hover transition
+    &:hover
+      color: inherit;
+      text-decoration: underline
 
   .date
     top: 3px
