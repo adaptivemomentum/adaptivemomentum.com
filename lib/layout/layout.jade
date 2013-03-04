@@ -7,14 +7,15 @@ html
       link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,400italic')
   body
     #wrapper
-      #head
+      #head.clearfix
         a#logo(href='/')
         #links
           a#mail mail
           a(href='http://github.com/matthewmueller', target='_blank') github
           a(href='http://twitter.com/mattmueller', target='_blank') twitter
           a(href='/rss') feed
-      block content
+      #content
+        block content
     block scripts
       script(src='/build.js')
       script require('layout')
