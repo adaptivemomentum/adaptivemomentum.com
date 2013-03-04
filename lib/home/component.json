@@ -1,6 +1,5 @@
 {
   "name": "home",
   "version" : "0.0.1",
-  "description": "home",
-  "styles" : ["home.styl"]
+  "description": "home"
 }

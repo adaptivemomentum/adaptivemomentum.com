@@ -1,0 +1,94 @@
+body
+  color: #444;
+  background: #fefe
+
+#wrapper
+  min-height: 100%
+  height: auto
+  width: 960px
+  margin: 0 auto
+
+#head
+  margin: 20px 0
+  width: 100%
+  position: relative
+
+#logo
+  float: left
+  display: block;
+  background: url('images/logo.png') center no-repeat
+  width: 250px
+  height: 167px
+
+#links
+  float: right;
+  font-size: 18px
+  font-weight: 200
+  margin-top: 52px
+
+  a
+    margin: 0 5px
+    display: inline-block
+    position: relative
+    color: #999
+    padding: 5px 10px
+    transition: border-color .25s ease-in-out,
+                color .25s ease-in-out,
+                top .25s ease-in-out
+
+  a:hover
+    color: #01B0F0
+    border-color: #01B0F0
+
+  &:last-child
+    margin-right: 0
+
+#content
+  clear: both;
+  margin: 0 115px;
+
+
+/**
+ * Media queries
+ */
+
+// Smaller than standard 960 (devices and browsers)
+@media only screen and (max-width: 959px)
+  #wrapper
+    width: 700px
+
+// Tablet Portrait size to standard 960 (devices and browsers)
+// @media only screen and (min-width: 768px) and (max-width: 959px)
+
+// All Mobile Sizes (devices and browser)
+@media only screen and (max-width: 767px)
+  #wrapper
+    width: 100%
+
+  #logo, #links
+    float: none
+
+  #logo
+    margin-left: auto
+    margin-right: auto
+
+  #links
+    margin-top: 20px
+    text-align: center
+
+  #content
+    margin: 0
+
+    .date
+      display: none
+
+    article
+      padding: 10px
+
+
+// Mobile Landscape Size to Tablet Portrait (devices and browsers)
+// @media only screen and (min-width: 480px) and (max-width: 767px)
+
+
+// Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
+// @media only screen and (max-width: 479px) {}
