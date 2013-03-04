@@ -30,6 +30,7 @@ app.configure('development', function(){
  * Mount
  */
 
+app.use(require('feed'));
 app.use(require('home'));
 app.use(require('deploy'));
 
