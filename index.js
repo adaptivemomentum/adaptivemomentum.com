@@ -73,7 +73,7 @@ function shutdown() {
   // arbitrary 2 seconds
   setTimeout(function() {
     process.exit(0);
-  }, 2000);
+  }, 4000);
 }
 
 process.on('SIGINT', shutdown);
