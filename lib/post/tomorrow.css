@@ -47,3 +47,11 @@ pre .xml .css,
 pre .xml .cdata {
   opacity: 0.5;
 }
+
+/**
+ * Custom stuff
+ */
+
+.lang-html .title {
+  color: #c82829;
+}
