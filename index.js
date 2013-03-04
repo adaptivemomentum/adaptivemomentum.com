@@ -2,7 +2,7 @@
  * Module dependencies.
  */
 
-var port = process.argv[2] || 9100,
+var port = process.argv[2] || 3000,
     express = require('express'),
     app = module.exports = express(),
     Sync = require('sync'),

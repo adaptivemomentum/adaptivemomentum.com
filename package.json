@@ -26,6 +26,7 @@
     "model-timestamps": "0.0.x",
     "model-mongo": "0.0.x",
     "model-slug": "0.0.x",
-    "gh-hook": "0.0.2"
+    "gh-hook": "0.0.2",
+    "highlight.js": "~7.3.0"
   }
 }
