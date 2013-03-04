@@ -31,6 +31,7 @@ app.configure('development', function(){
  */
 
 app.use(require('feed'));
+app.use(require('post'));
 app.use(require('home'));
 app.use(require('deploy'));
 

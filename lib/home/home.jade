@@ -1,8 +1,12 @@
 extends ../layout/layout
-include ../post/post
 
 block content
-  - each p in posts
-    mixin post(p)
+  - each post in posts
+    article.post
+      h1.title
+        a(href='/#{post.slug}') !{post.title}
+      .date !{post.created_at}
+      .content !{post.content}
+
 
 

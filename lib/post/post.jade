@@ -1,6 +1,13 @@
-mixin post(post)
+extend ../layout/layout
+
+block content
   article.post
     h1.title
       a(href='/#{post.slug}') !{post.title}
     .date !{post.created_at}
     .content !{post.content}
+
+    #disqus_thread
+
+append scripts
+  script require('post')

@@ -2,5 +2,7 @@
   "name": "post",
   "version" : "0.0.1",
   "description": "post",
-  "styles": ["post.styl"]
+  "styles": ["post.styl"],
+  "main" : "post.js",
+  "scripts": ["post.js"]
 }
