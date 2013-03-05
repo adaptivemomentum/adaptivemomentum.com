@@ -26,7 +26,6 @@ app.configure('development', function(){
   app.use(express.logger('dev'));
 });
 
-
 /**
  * Mount
  */
@@ -61,7 +60,7 @@ sync.sync(function(err) {
  * Listen
  */
 
-var server = app.listen(port, function() {
+app.listen(port, function() {
   console.log("listening on port %s", port);
 });
 
@@ -70,12 +69,7 @@ var server = app.listen(port, function() {
  */
 
 function shutdown() {
-  server.close();
-
-  // arbitrary 2 seconds
-  setTimeout(function() {
-    process.exit(0);
-  }, 4000);
+  process.exit(0);
 }
 
 process.on('SIGINT', shutdown);

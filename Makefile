@@ -23,4 +23,10 @@ minify-js: build/build.js
 clean:
 	rm -fr components node_modules
 
-.PHONY: build clean minify
+production:
+	@npm update --production --loglevel warn
+	@rm -rf components
+	@component install
+	@component build
+
+.PHONY: build clean minify production
