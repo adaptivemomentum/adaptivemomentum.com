@@ -27,6 +27,6 @@ production:
 	@npm update --production --loglevel warn
 	@rm -rf components
 	@component install
-	@component build
+	@./lib/build/builder
 
 .PHONY: build clean minify production
