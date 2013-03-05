@@ -2,6 +2,7 @@
   "name": "mat.io",
   "version": "0.0.1",
   "paths": ["lib"],
+  "images" : ["favicon.ico"],
   "local": [
     "base",
     "layout",

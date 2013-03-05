@@ -12,7 +12,7 @@ var port = process.argv[2] || 3000,
  * Configuration
  */
 
-app.use(express.favicon());
+app.use(express.favicon(__dirname + '/favicon.ico'));
 app.use(express.bodyParser());
 
 app.configure('production', function() {
@@ -25,6 +25,7 @@ app.configure('development', function(){
   app.use(require('build'));
   app.use(express.logger('dev'));
 });
+
 
 /**
  * Mount
