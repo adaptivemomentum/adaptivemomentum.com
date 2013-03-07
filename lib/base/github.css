@@ -10,6 +10,7 @@ pre code {
   background: #F8F8F8;
   border: 1px solid #ccc;
   padding: 20px 20px;
+  border-radius: 3px
 }
 
 pre .comment,
