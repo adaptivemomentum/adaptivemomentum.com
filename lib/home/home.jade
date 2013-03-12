@@ -6,6 +6,7 @@ block content
       h1.title
         a(href='/#{post.slug}') !{post.title}
       p.short !{post.short}
+        a.ellipsis(href='/#{post.slug}') • • •
       .date !{post.created_at}
 
 
