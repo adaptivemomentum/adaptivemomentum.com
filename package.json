@@ -29,6 +29,7 @@
     "gh-hook": "~0.1.0",
     "highlight.js": "~7.3.0",
     "rss": "0.0.4",
-    "cheerio": "~0.10.7"
+    "cheerio": "~0.10.7",
+    "simplenote-sync" : "0.0.x"
   }
 }
