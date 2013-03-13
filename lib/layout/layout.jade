@@ -1,11 +1,18 @@
 doctype 5
 html
   head
-    title Matthew Mueller
+    title #{title}
+
+    - description="Matthew Mueller is a web developer, designer, entrepreneur, and minimalist."
 
     //- Meta
+    meta(name="description", content=description)
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
     meta(name="viewport", content="width=device-width")
+
+    //- OG
+    meta(property="og:title", content="#{title}")
+    meta(property="og:description", content=description)
 
     //- Favicon
     link(rel="shortcut icon", href="/favicon.png")
