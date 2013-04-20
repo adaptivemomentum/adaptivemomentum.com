@@ -3,7 +3,7 @@ html
   head
     title #{title}
 
-    - description="Matthew Mueller is a web developer, designer, entrepreneur, and minimalist."
+    - description="Adaptive Momentum is building the future"
 
     //- Meta
     meta(name="description", content=description)
@@ -18,7 +18,7 @@ html
     link(rel="shortcut icon", href="/favicon.png")
 
     //- RSS
-    link(rel="alternate", type="application/rss+xml", title="RSS 2.0", href="http://mat.io/rss")
+    link(rel="alternate", type="application/rss+xml", title="RSS 2.0", href="http://adaptivemomentum.com/rss")
 
     //- Authorship
     link(rel="author", href="https://plus.google.com/113710016286145697745/posts")
@@ -32,11 +32,11 @@ html
   body
     #wrapper
       #head.clearfix
-        a#logo(href='/')
+        a#logo(href='/') Adaptive Momentum
         #links
           a#mail mail
-          a(href='http://github.com/matthewmueller', target='_blank') github
-          a(href='http://twitter.com/mattmueller', target='_blank') twitter
+          a(href='http://github.com/adaptivemomentum', target='_blank') github
+          a(href='http://twitter.com/adaptivemoment', target='_blank') twitter
           a(href='/rss') feed
       #content
         block content

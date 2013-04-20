@@ -5,7 +5,7 @@
 var port = process.argv[2] || 3000,
     express = require('express'),
     app = module.exports = express(),
-    auth = require(process.env.HOME + '/credentials.json').simplenote;
+    auth = require(process.env.HOME + '/credentials.json')['am-simplenote'];
 
 /**
  * Configuration
@@ -48,7 +48,7 @@ var simplenote = Simplenote({
   email : auth.email,
   password : auth.password,
   model : require('post/model'),
-  tag : 'mat.io'
+  tag : 'am'
 });
 
 setInterval(function() {

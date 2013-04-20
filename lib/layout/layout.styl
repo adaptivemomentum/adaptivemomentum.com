@@ -9,22 +9,24 @@ body
   margin: 0 auto
 
 #head
-  margin: 20px 0
+  margin-top: 20px
+  margin-bottom: 60px
   width: 100%
   position: relative
 
 #logo
   float: left
   display: block;
-  background: url('images/logo.png') center no-repeat
-  width: 250px
-  height: 167px
+  font-size: 36px
+  font-weight: 200
+  padding-top: 50px
+  padding-left: 45px
 
 #links
   float: right;
   font-size: 18px
   font-weight: 200
-  margin-top: 52px
+  margin-top: 56px
 
   a
     margin: 0 5px
@@ -48,6 +50,15 @@ body
   margin: 0 115px;
 
 
+iframe
+  margin-left: -40px
+  width: 800px
+  height: 300px
+  border: 1px solid #ccc
+  margin-bottom: 1.25em
+
+
+
 /**
  * Media queries
  */
@@ -61,6 +72,9 @@ body
     padding-top: 8px;
     font-size: 30px;
 
+  iframe
+    width: 540px
+
 // Tablet Portrait size to standard 960 (devices and browsers)
 // @media only screen and (min-width: 768px) and (max-width: 959px)
 
@@ -69,17 +83,24 @@ body
   #wrapper
     width: 100%
 
+  iframe
+    margin-left: 0
+    width: 100%
+
+  #head
+    margin-bottom: 20px
+
   #logo, #links
+    text-align: center
     float: none
 
   #logo
-    margin-left: auto
-    margin-right: auto
+    padding-left: 0
+    padding-top: 20px
 
   #links
     margin-top: 20px
     text-align: center
-
 
   .title
     font-size: 24px
